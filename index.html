@@ -4,128 +4,218 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shivam Pandey | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2d3b6a9d4e.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f9;
+      background: #f9fafc;
       color: #333;
     }
     header {
-      background: #2c3e50;
+      background: #1f2d3d;
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
     }
     header h1 {
       margin: 0;
+      font-size: 2rem;
     }
-    nav {
-      margin-top: 10px;
+    header p {
+      margin: 5px 0 15px;
+      font-weight: 300;
     }
     nav a {
       margin: 0 15px;
       color: #fff;
       text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    a.resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff7b00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    a.resume-btn:hover {
+      background: #e56a00;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    /* Skills Section */
+    ul.skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+      list-style: none;
+    }
+    ul.skills li {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 15px;
+      flex: 1 1 200px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
     .project {
       background: #fff;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    footer {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project h3 {
+      margin-top: 0;
     }
     a.btn {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 15px;
-      background: #2980b9;
+      background: #0077b6;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
+      font-size: 0.9rem;
     }
     a.btn:hover {
-      background: #1f6690;
+      background: #005f87;
+    }
+    /* Contact */
+    .contact-info p {
+      margin: 8px 0;
+    }
+    .contact-info a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #1f2d3d;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- 👇 Upload your photo into the repo as 'profile.jpg' -->
+    <img src="profile.jpg" alt="Shivam Pandey Photo">
     <h1>Shivam Pandey</h1>
-    <p>Data Analyst | SQL | Python | Excel | Power BI</p>
+    <p><i class="fas fa-database"></i> Data Analyst | SQL | Python | Excel | Power BI</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <!-- 👇 Upload your resume as 'resume.pdf' -->
+    <a href="resume.pdf" class="resume-btn" target="_blank"><i class="fas fa-file-download"></i> Download Resume</a>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a Data Analyst with 3 years of professional experience as a Web Publisher 
-      and a strong background in SQL, Python, Excel, and Power BI. 
-      Passionate about transforming raw data into actionable insights to support business decisions.
+      I have 3 years of experience as a Web Publisher and I have hands-on Data Analyst 
+      expertise in SQL, Python, Excel, and Power BI. I specialize in cleaning, analyzing, 
+      and visualizing data to support decision-making and business growth.
     </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>SQL – Data extraction, joins, aggregations</li>
-      <li>Python – Pandas, NumPy, data cleaning</li>
-      <li>Excel – Pivot tables, dashboards, formulas</li>
-      <li>Power BI – Interactive dashboards</li>
-      <li>Data Cleaning & Visualization</li>
+    <ul class="skills">
+      <li><i class="fas fa-database"></i> SQL</li>
+      <li><i class="fab fa-python"></i> Python (Pandas, NumPy)</li>
+      <li><i class="fas fa-table"></i> Excel (Pivot, Dashboards)</li>
+      <li><i class="fas fa-chart-bar"></i> Power BI</li>
+      <li><i class="fas fa-broom"></i> Data Cleaning</li>
+      <li><i class="fas fa-chart-line"></i> Data Visualization</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Sales Dashboard (Power BI)</h3>
-      <p>Designed an interactive dashboard to analyze regional sales performance, customer trends, and product demand.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="project">
-      <h3>SQL Data Analysis</h3>
-      <p>Used SQL queries to extract insights from a retail dataset, identifying sales growth and customer segmentation.</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-
-    <div class="project">
-      <h3>Python Data Cleaning</h3>
-      <p>Cleaned and transformed raw datasets using Pandas and NumPy, preparing them for business reporting.</p>
-      <a href="#" class="btn">View Project</a>
+    <div class="projects">
+      <!-- 👇 Replace # with your project links -->
+      <div class="project">
+        <h3><i class="fas fa-chart-pie"></i> Sales Dashboard (Power BI)</h3>
+        <p>Interactive dashboard to analyze sales trends, product performance, and customer insights.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <h3><i class="fas fa-database"></i> SQL Data Analysis</h3>
+        <p>Extracted insights from a retail dataset to identify growth patterns and customer segmentation.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <h3><i class="fab fa-python"></i> Python Data Cleaning</h3>
+        <p>Cleaned and transformed raw datasets with Pandas and NumPy for business reporting.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:shivampandey@example.com">shivampandey@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/shivampandeyanalyst" target="_blank">github.com/shivampandeyanalyst</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:shivampandey@gmail.com">Email</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/shivampandeyanalyst" target="_blank">GitHub</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="www.linkedin.com/in/shivam-pandey1" target="_blank">Linkedin</a></p>
+    </div>
   </section>
 
   <footer>
@@ -133,4 +223,3 @@
   </footer>
 </body>
 </html>
-
